@@ -48,3 +48,15 @@ function signinForm() {
     return false;
       }
 }
+
+
+function forgetpwd (){
+    var email = document.Fpwd.email.value;
+    atpos = email.indexOf("@");
+    dotpos = email.lastIndexOf(".");
+    if (atpos < 1 || (dotpos - atpos < 2)) {
+      alert("Please enter correct email address")
+      document.Fpwd.email.focus();
+      return false;
+    }
+}
